@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: file-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      BOT_TOKEN: your_token
+      ADMIN_IDS: "123456789"
+      DATABASE_URL: your_mongodb_url
+      SHORTENER_API_URL: https://your-api.com
+      SHORTENER_API_KEY: your_key
+      BOT_USERNAME: yourbot
+      WEBHOOK_URL: https://your-service.onrender.com/
