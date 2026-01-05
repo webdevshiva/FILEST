@@ -1,5 +1,5 @@
 from pymongo import MongoClient
-from config import DATABASE_URL
+from config import DATABASE_URL, SESSION_DURATION
 import time
 
 client = MongoClient(DATABASE_URL)
@@ -104,4 +104,5 @@ async def apply_caption(message_id, user_id, batch_name=None):  # placeholder, f
     return caption
 
 async def get_global_caption():
+
     return await get_setting("global_caption", "")    
